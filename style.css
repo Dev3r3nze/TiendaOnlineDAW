@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #9CAEA9;
+
+}
+
+#header{
+    width: 100%;
+    height: 10vh;
+    background: #6F6866;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo{
+    width: 8vh;
+}
+#loginBtn{
+    width: 13vh;
+    height: 4vh;
+    margin-right: 4vh;
+}
+#carritoBtn{
+    border-radius: 100px;
+    border: 0px;
+    width: 4vh;
+    height: 4vh;
+}
+
+#fondo{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#separador{
+    width: 100%;
+    height: 10vh;
+    background: #6F6866;
+    margin-top: 90vh;
+}
+#productosContent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.producto{
+    margin: auto;
+    width: 80%;
+    height: 40vh;
+    background: #6F6866;
+    margin-top: 5vh;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.producto img{
+    width: 20vh;
+    border-radius: 30px;
+}
+.producto p{
+    color: white;
+}
+.producto button{
+    height: 5vh;
+    width: 80%;
+    background: #CCDAD1;
+    border: 0px;
+    border-radius: 30px;
+}
+
+.rowProductos{
+    width: 20%;
+}
+
+#footer{
+    width: 100%;
+    height: 6vh;
+    background: #6F6866;
+    margin-top: 3vh;
+    text-align: end;
+}
+#footer p{
+    padding: 2vh;
+    color: #9CAEA9;
+}
