@@ -1,2 +1,5 @@
-# tiendaOnlineDAW
-Tienda online para un trabajo del grado de DAW
+# Tienda Online
+*Trabajo del grado de DAW
+
+##Tienda de minifiguritas de Lego Star Wars
+En desarrollo...
