@@ -11,10 +11,17 @@
 <body>
     <div id="header">
         <div class="colHeader">
-            <img src="samurai.jpg" alt="" id="logo">
+            <a href="#"><img src="samurai.jpg" alt="" id="logo"></a>
         </div>
         <div class="colHeader">
-            <button id="loginBtn"></button>
+            <script>
+                function Mostrar(){
+                    if(document.getElementById("login").style.display=="flex"){
+                        document.getElementById("login").style.display="none"
+                    }else document.getElementById("login").style.display="flex"
+                }
+            </script>
+            <button id="loginBtn" onclick="Mostrar()"><p>Log in</p></button>
             <button id="carritoBtn"></button>
         </div>
     </div>
@@ -24,88 +31,120 @@
         <div id="productosContent">
             <div class="rowProductos">
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Anakin</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Kenobi</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Ashoka</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
-                    <p>10.00€</p>
-                    <button>Añadir</button>
-                </div>
-            </div>
-            <div class="rowProductos">
-                <div class="producto">
-                    <img src="productos/capibara.jpg" alt="">
-                    <p>10.00€</p>
-                    <button>Añadir</button>
-                </div>
-                <div class="producto">
-                    <img src="productos/capibara.jpg" alt="">
-                    <p>10.00€</p>
-                    <button>Añadir</button>
-                </div>
-                <div class="producto">
-                    <img src="productos/capibara.jpg" alt="">
-                    <p>10.00€</p>
-                    <button>Añadir</button>
-                </div>
-                <div class="producto">
-                    <img src="productos/capibara.jpg" alt="">
+                    <p>Yoda</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
             </div>
             <div class="rowProductos">
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Dooku</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Maul</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Grievous</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Ventress</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
             </div>
             <div class="rowProductos">
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Rex</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Clon 501</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Cody</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
                 <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
                     <img src="productos/capibara.jpg" alt="">
+                    <p>Clon 212</p>
+                    <p>10.00€</p>
+                    <button>Añadir</button>
+                </div>
+            </div>
+            <div class="rowProductos">
+                <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
+                    <img src="productos/capibara.jpg" alt="">
+                    <p>Droide de batalla</p>
+                    <p>10.00€</p>
+                    <button>Añadir</button>
+                </div>
+                <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
+                    <img src="productos/capibara.jpg" alt="">
+                    <p>Droide comando</p>
+                    <p>10.00€</p>
+                    <button>Añadir</button>
+                </div>
+                <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
+                    <img src="productos/capibara.jpg" alt="">
+                    <p>Droideka </p>
+                    <p>10.00€</p>
+                    <button>Añadir</button>
+                </div>
+                <div class="producto">
+                    <div class="cantidad"><p>x0</p></div>
+                    <img src="productos/capibara.jpg" alt="">
+                    <p>Superdroide de batalla</p>
                     <p>10.00€</p>
                     <button>Añadir</button>
                 </div>
@@ -116,5 +155,16 @@
     <div id="footer">
         <p>admin</p>
     </div>
+
+    <div id="login">
+        <p>Hola</p>
+        <form action="">
+            <input type="text" name="" id="" placeholder="User">
+            <input type="password" name="" id="" placeholder="Password">
+            <input type="submit" id="loginSubmit" value="Log in"> 
+            <p>Crear cuenta</p>
+        </form>
+    </div>
+
 </body>
 </html>
