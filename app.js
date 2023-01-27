@@ -1,5 +1,3 @@
-
-
 var cantidad1 = 0
 var cantidad2 = 0
 var cantidad3 = 0
