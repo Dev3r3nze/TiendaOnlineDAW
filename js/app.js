@@ -87,6 +87,7 @@ function Agregar(id){
     
     arrCantidades = [cantidad1,cantidad2,cantidad3,cantidad4,cantidad5,cantidad6,cantidad7,cantidad9,cantidad9,cantidad10,cantidad11,cantidad12,cantidad13,cantidad14,cantidad15,cantidad16]
     document.cookie = "cantidades="+ JSON.stringify(arrCantidades);
+
 }
 function Quitar(id){
     switch(id){
