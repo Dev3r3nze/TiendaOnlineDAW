@@ -1,5 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$user = $_POST["user"];
+$pass = $_POST["pass"];
+
+//$_SESSION["id"] = "Usuario1"; 
+
+$servidor = "localhost"; 
+$usuario = "root"; $contrasenha = ""; ;
+$conexion = mysqli_connect($servidor, $usuario, $contrasenha);
+
+$datab = "tiendaonline";
+$db = mysqli_select_db($conexion,$datab);
+
+$consulta = "SELECT * FROM clientes WHERE cliente_nombre = '$user' AND cliente_pass = '$pass'";
+
+
+$result = mysqli_query($conexion,$consulta);
+if(!$result) 
+{
+    echo "No se ha podido realizar la consulta";
+}
+
+//Si el usuario se encuentra en los registros recuperados de la BBDD
+if(mysqli_num_rows($result)>0){
+    session_start();//Se crea una nueva sesión
+  //Se  almacena  en  el  array  de  SESSION,  utilizando  una  clave  común  de  
+//inserción
+    $_SESSION['user']=$result; 
+    if($user == "admin"){
+        header("Location: pages/admin.php");
+
+    }
+  //Se redirecciona a la página de usuario autenticado
+}else{
+    echo'<script type="text/javascript">
+    alert("Usuario o contraseña incorrectos");
+    window.location.href="index.html";
+    </script>';
+}
+$crear = "INSERT INTO `clientes`(`cliente_id`, `cliente_nombre`, `cliente_pass`) VALUES ('','$user','$pass')";
+
+
+?>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +56,8 @@
 </head>
 <body>
     <div id="login">
-        <p>¿Quien eres?</p>
-        <form action="login.php" method="post" id="form">
-            <input type="text" name="user" id="" placeholder="User">
-            <input type="password" name="pass" id="" placeholder="Password">
-            <input type="submit" id="loginSubmit" value="Log in" onclick="Register(1)"> 
-            <input type="submit" id="crearCuentaText" value="Crear cuenta" onclick="Register(0)"> 
-        </form>
+    <?php echo "<p>Hola $user;</p>"?>
+        <button id="cerrarBtn">Cerrar sesion</button>
     </div>
     <div id="header">
         <div class="colHeader">
