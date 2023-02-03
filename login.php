@@ -1,5 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$user = $_GET["user"];
+$pass = $_GET["pass"];
+
+
+
+
+$servidor = "localhost"; 
+$usuario = "root"; $contrasenha = ""; ;
+$conexion = mysqli_connect($servidor, $usuario, $contrasenha);
+
+$datab = "tiendaonline";
+$db = mysqli_select_db($conexion,$datab);
+
+$consulta = "SELECT * FROM clientes WHERE cliente_nombre = '$user' AND cliente_pass = '$pass'";
+
+
+$result = mysqli_query($conexion,$consulta);
+if(!$result) 
+{
+    echo "No se ha podido realizar la consulta";
+}
+
+if(mysqli_num_rows($result)>0){
+    session_start();
+    $_SESSION['user']=$result; 
+    if($user == "admin"){
+        header("Location: pages/admin.php");
+
+    }
+}else{
+    echo'<script type="text/javascript">
+    alert("Usuario o contraseña incorrectos");
+    window.location.href="index.html";
+    </script>';
+}
+
+
+?>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,17 +52,9 @@
 </head>
 <body>
     <div id="login">
-        <p>Login</p>
-        <form action="login.php" method="get" id="form">
-            <input type="text" name="user" id="" placeholder="User" required>
-            <input type="password" name="pass" id="" placeholder="Password" required>
-            <input type="submit" id="loginSubmit" value="Log in"> 
-        </form>
-        <p>Registrarse</p>
-        <form action="register.php" method="get">
-            <input type="text" name="userC" id="" placeholder="User">
-            <input type="password" name="passC" id="" placeholder="Password" required>
-            <input type="submit" id="crearCuentaText" value="Crear cuenta" required> 
+    <?php echo "<p>Hola $user</p>"?>
+    <form action="destroy.php" method="post">
+        <input type="submit" value="Cerrar sesión"/>
         </form>
     </div>
     <div id="header">
@@ -31,6 +63,7 @@
         </div>
         <div class="colHeader">
             <button id="loginBtn" onclick="Mostrar()"></button>
+            <a href="pages/carrito.html"><button id="carritoBtn"></button></a>
         </div>
     </div>
     <div id="content">

@@ -1,46 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/homeStyle.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/homeStyle.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
+    <script src="../js/app.js"></script>
     <title>Minifiguras Star Wars</title>
 </head>
 <body>
     <div id="login">
-        <p>Login</p>
-        <form action="login.php" method="get" id="form">
-            <input type="text" name="user" id="" placeholder="User" required>
-            <input type="password" name="pass" id="" placeholder="Password" required>
-            <input type="submit" id="loginSubmit" value="Log in"> 
-        </form>
-        <p>Registrarse</p>
-        <form action="register.php" method="get">
-            <input type="text" name="userC" id="" placeholder="User">
-            <input type="password" name="passC" id="" placeholder="Password" required>
-            <input type="submit" id="crearCuentaText" value="Crear cuenta" required> 
+    <?php echo "<p>Hola Admin</p>"?>
+    <form action="../destroy.php" method="post">
+        <input type="submit" value="Cerrar sesión"/>
         </form>
     </div>
     <div id="header">
         <div class="colHeader">
-            <a href="#"><img src="images/logo.png" alt="" id="logo"></a>
+            <a href="#"><img src="../images/logo.png" alt="" id="logo"></a>
         </div>
         <div class="colHeader">
             <button id="loginBtn" onclick="Mostrar()"></button>
+            <a href="pages/carrito.html"><button id="carritoBtn"></button></a>
         </div>
     </div>
     <div id="content">
-        <img src="images/fondo.jpg" alt="" id="fondo">
-        <div id="separador"></div>
+        <img src="../images/fondo.jpg" alt="" id="fondo">
+        <div id="separador"><h1>Modo admin</h1></div>
         <div id="productosContent">
             <div class="rowProductos">
                 <div class="producto" id="prod1" >
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/Anakin.webp" alt="">
+                    <img src="../images/productos/Anakin.webp" alt="">
                     <p>Anakin</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -50,7 +41,7 @@
                 </div>
                 <div class="producto" id="prod2">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/dooku.webp" alt="">
+                    <img src="../images/productos/dooku.webp" alt="">
                     <p>Dooku</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -60,7 +51,7 @@
                 </div>
                 <div class="producto" id="prod3">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/rex.jpg" alt="">
+                    <img src="../images/productos/rex.jpg" alt="">
                     <p>Rex</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -70,7 +61,7 @@
                 </div>
                 <div class="producto" id="prod4"> 
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/droideDeBatalla.webp" alt="">
+                    <img src="../images/productos/droideDeBatalla.webp" alt="">
                     <p>Droide de batalla</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -82,7 +73,7 @@
             <div class="rowProductos">
                 <div class="producto" id="prod5" >
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/kenobi.webp" alt="">
+                    <img src="../images/productos/kenobi.webp" alt="">
                     <p>Kenobi</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -92,7 +83,7 @@
                 </div>
                 <div class="producto" id="prod6">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/maul.jpg" alt="">
+                    <img src="../images/productos/maul.jpg" alt="">
                     <p>Maul</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -102,7 +93,7 @@
                 </div>
                 <div class="producto" id="prod7">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/clon501.jpg" alt="">
+                    <img src="../images/productos/clon501.jpg" alt="">
                     <p>Clon 501th</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -112,7 +103,7 @@
                 </div>
                 <div class="producto" id="prod8">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/droideComando.jpg" alt="">
+                    <img src="../images/productos/droideComando.jpg" alt="">
                     <p>Droide comando</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -124,7 +115,7 @@
             <div class="rowProductos">
                 <div class="producto" id="prod9">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/ashoka.webp" alt="">
+                    <img src="../images/productos/ashoka.webp" alt="">
                     <p>Ashoka</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -134,7 +125,7 @@
                 </div>
                 <div class="producto" id="prod10">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/ventress.jpg" alt="">
+                    <img src="../images/productos/ventress.jpg" alt="">
                     <p>Ventress</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -144,7 +135,7 @@
                 </div>
                 <div class="producto" id="prod11">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/cody.webp" alt="">
+                    <img src="../images/productos/cody.webp" alt="">
                     <p>Cody</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -154,7 +145,7 @@
                 </div>
                 <div class="producto" id="prod12">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/droideka.jpg" alt="">
+                    <img src="../images/productos/droideka.jpg" alt="">
                     <p>Droideka</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -166,7 +157,7 @@
             <div class="rowProductos">
                 <div class="producto" id="prod13">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/yoda.jpg" alt="">
+                    <img src="../images/productos/yoda.jpg" alt="">
                     <p>Yoda</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -176,7 +167,7 @@
                 </div>
                 <div class="producto" id="prod14">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/grievous.jpg" alt="">
+                    <img src="../images/productos/grievous.jpg" alt="">
                     <p>Grievous</p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -186,7 +177,7 @@
                 </div>
                 <div class="producto" id="prod15">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/clon212.webp" alt="">
+                    <img src="../images/productos/clon212.webp" alt="">
                     <p>Clon 212th </p>
                     <p>10.00€</p>
                     <div class="btns">
@@ -196,7 +187,7 @@
                 </div>
                 <div class="producto" id="prod16">
                     <div class="cantidad"><p>x0</p></div>
-                    <img src="images/productos/superdroide.jpg" alt="">
+                    <img src="../images/productos/superdroide.jpg" alt="">
                     <p>Superdroide de batalla</p>
                     <p>10.00€</p>
                     <div class="btns">

@@ -41,7 +41,11 @@
     flex-direction: row;
     justify-content: center;
 }
-
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
 .producto{
     margin: auto;
     width: 80%;
@@ -74,7 +78,7 @@
 }
 .producto button{
     height: 5vh;
-    width: 80%;
+    width: 40%;
     background: #CCDAD1;
     border: 0px;
     border-radius: 30px;
@@ -86,21 +90,6 @@
 }
 
 
-#login{
-    position: fixed;
-    top: 32%;
-    left: 43%;
-    height: 25vh;
-    background: #9caea9;
-    border-radius: 30px;
-    padding: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: #2c2c2c 0px 5px 15px;
-    display: none;
-}
 
 #loginTitle{
     font-size: 20px;
@@ -111,7 +100,7 @@
     align-items: center;
     height: 80%;
     justify-content: space-evenly;
-    
+    margin-bottom: 1vh
 }
 #login form input{
     height: 3vh;
@@ -121,7 +110,10 @@
     padding: 1vh;
     color: white;
 }
-#login #loginSubmit{
+#crearCuentaText{
+    height: 1vh;
+}
+#login #loginSubmit, #cerrarBtn{
     background: #CCDAD1;
     height: 4vh;
     border: 0px;
@@ -131,14 +123,14 @@
     color: #2c2c2c;
 }
 
-.producto button:hover, #loginBtn:hover, #carritoBtn:hover, #logo:hover, #loginSubmit:hover{
+.producto button:hover, #cerrarBtn:hover, #loginBtn:hover, #carritoBtn:hover, #logo:hover, #loginSubmit:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
 
 #crearCuentaText:hover{
     cursor: pointer;
-    color: #323232;
+    color: #dadada;
 }
 #footer{
     position: initial;

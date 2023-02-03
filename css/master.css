@@ -52,7 +52,7 @@ body{
     position: fixed;
     top: 32%;
     left: 43%;
-    height: 25vh;
+    height: 35vh;
     background: #9caea9;
     border-radius: 30px;
     padding: 5vh;
@@ -68,3 +68,5 @@ body{
     transform: scale(1.1);
     cursor: pointer;
 }
+
+h1{color:white}

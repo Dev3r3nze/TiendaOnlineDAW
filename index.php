@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +16,12 @@
 </head>
 <body>
     <div id="login">
-        <p>Login</p>
-        <form action="login.php" method="get" id="form">
-            <input type="text" name="user" id="" placeholder="User" required>
-            <input type="password" name="pass" id="" placeholder="Password" required>
-            <input type="submit" id="loginSubmit" value="Log in"> 
-        </form>
-        <p>Registrarse</p>
-        <form action="register.php" method="get">
-            <input type="text" name="userC" id="" placeholder="User">
-            <input type="password" name="passC" id="" placeholder="Password" required>
-            <input type="submit" id="crearCuentaText" value="Crear cuenta" required> 
+        <p>¿Quien eres?</p>
+        <form action="login.php" method="post" id="form">
+            <input type="text" name="user" id="" placeholder="User">
+            <input type="password" name="pass" id="" placeholder="Password">
+            <input type="submit" id="loginSubmit" value="Log in" onclick="Register(1)"> 
+            <input type="submit" id="crearCuentaText" value="Crear cuenta" onclick="Register(0)"> 
         </form>
     </div>
     <div id="header">
@@ -31,6 +30,7 @@
         </div>
         <div class="colHeader">
             <button id="loginBtn" onclick="Mostrar()"></button>
+            <a href="pages/carrito.html"><button id="carritoBtn"></button></a>
         </div>
     </div>
     <div id="content">
